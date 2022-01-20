@@ -2,6 +2,7 @@
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,21 +30,24 @@ Route::get('/about', function () {
     ]);
 });
 
-
-Route::get('/blog', function () {
-});
-
 /* Halaman single post */
-Route::get('posts/{slug}', function ($slug) {
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('posts/{slug}', [PostController::class, 'show']);
+
+
+
+
+
+
+
+
+
+
+
+
     /*   $new_post = [];
     foreach ($blog_posts as $post) {
         if ($post["slug"] === $slug) {
             $new_post = $post;
         }
     } */
-
-    return view('post', [
-        "title" => "Single Post",
-        "post" => Post::find($slug)
-    ]);
-});
