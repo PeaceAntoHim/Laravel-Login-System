@@ -2,10 +2,10 @@ body {
     background-color: rgb(230, 233, 200);
 }
 
-.img-thumbnail {
-    height: 200px;
+.container {
+    width: 850px;
 }
 
-.blog {
-    color: rgb(0, 162, 255);
+.img-thumbnail {
+    height: 200px;
 }
