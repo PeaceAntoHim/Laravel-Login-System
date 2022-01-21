@@ -1,7 +1,11 @@
 body {
-    background-color: rgb(108, 206, 252);
+    background-color: rgb(230, 233, 200);
 }
 
 .img-thumbnail {
     height: 200px;
+}
+
+.blog {
+    color: rgb(0, 162, 255);
 }
