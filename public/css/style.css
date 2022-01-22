@@ -42,6 +42,10 @@ body {
     margin-bottom: -1px;
 }
 
+.form-floating {
+    margin-bottom: 6px;
+}
+
 .login {
     margin: 100px;
 }
