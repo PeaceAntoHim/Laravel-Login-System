@@ -6,7 +6,7 @@
                 <div class="col-md-8">
                     <h1 class="mb-3">{{ $post->title }}</h1>
                     <p>
-                        By. <a href="/authors/{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> Topic <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a>
+                        By. <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> Topic <a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a>
                     </p>
                     <img src="https://source.unsplash.com/800x450?{{ $post->category->name }}" alt="{{ $post->category->name }}" clas="imd-fluid">
                     <article class="my-3 fs-5">
