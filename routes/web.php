@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Post;
+use App\Models\Category;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-
-use App\Models\Category;
-use App\Models\User;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +21,7 @@ use App\Models\User;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        "active" => "categories",
+        "active" => "home",
     ]);
 });
 
@@ -31,7 +31,7 @@ Route::get('/about', function () {
         "name" => "Frans Sebastian",
         "email" => "franssebastian15@gmail.com",
         "image" => "Frans P1.jpg",
-        "active" => "categories"
+        "active" => "about"
     ]);
 });
 
@@ -47,6 +47,40 @@ Route::get('/categories', function () {
         'categories' => Category::all(),
     ]);
 });
+
+// Route untuk login
+Route::get('/login', [LoginController::class, 'index']);
+// Route untuk register
+Route::get('/register', [RegisterController::class, 'index']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Route::get('/categories/{category:slug}', function (Category $category) {
     return view('posts', [
