@@ -6,6 +6,11 @@
     <meta name="description" content="Made new blog login system you can create and post what you want">
     <meta name="author" content="Frans Sebastian">
     <meta name="generator" content="Hugo 0.88.1">
+     {{-- Tricks Editor --}}
+     <link rel="stylesheet" type="text/css" href="/css/trix.css">
+     <script type="text/javascript" src="/js/trix.js"></script>
+    {{-- My css --}}
+    <link rel="stylesheet" href="/css/style.css">
     <title>Blogpost | Dashboard</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
@@ -19,6 +24,13 @@
     
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet">
+    <style>
+      trix-toolbar [data-trix-button-group="file-tools"] {
+        display: none;
+      }
+    </style>
+
+
   </head>
   <body>
     
