@@ -22,7 +22,12 @@
                     {{-- Form slug --}}
                     <div class="mb-3">
                       <label for="slug" class="form-label">Slug</label>
-                      <input type="text" class="form-control" id="slug" name="slug" readonly required value="{{ old('slug', $post->slug) }}">
+                      <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" readonly required value="{{ old('slug', $post->slug) }}">
+                      @error('slug')
+                      <div class="invalid-feedback">
+                          {{ $message }}
+                      </div>
+                      @enderror
                     </div>
                     <div class="mb-3">
                       {{-- Form Category --}}
@@ -48,7 +53,7 @@
                         @enderror                        
                       </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Create post</button>
+                    <button type="submit" class="btn btn-primary">Updatae post</button>
                   </form>
             </div>
       
