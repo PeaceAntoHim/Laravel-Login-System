@@ -13,15 +13,13 @@
                         @csrf
                         <button class="btn btn-danger" onclick="return confirm('Are you sure to delete this post?')"><span data-feather="x-circle"> </span> Delete this post</button>
                     </form>
-                @if($post->image) {
-                    <div>
-                        <img src="{{ asset('storage/'.$post->image) }}" alt="{{ $post->category->name }}" class="img-fluid mt-3">
-                    </div>
-                }
-
-                @else
-                <img src="https://source.unsplash.com/950x500?{{ $post->category->name }}" alt="{{ $post->category->name }}" class="img-fluid mt-3">
-                @endif
+                    @if($post->image) 
+                        <div style="max-height: 950px; overflow: hidden;">
+                            <img src="{{ asset('storage/'.$post->image) }}" alt="{{ $post->category->name }}" class="img-fluid mt-3">
+                        </div>
+                    @else
+                    <img src="https://source.unsplash.com/950x500?{{ $post->category->name }}" alt="{{ $post->category->name }}" class="img-fluid mt-3">
+                    @endif
                 <article class="my-3 fs-5">
                     {!! $post->body !!}
                 </article>

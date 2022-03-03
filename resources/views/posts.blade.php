@@ -24,8 +24,14 @@
     @if ($posts->count())
         {{-- Card Hero --}}
         <div class="card mb-3">
+            @if($posts[0]->image) 
+            <div style="max-height: 950px; overflow: hidden;">
+                <img src="{{ asset('storage/'.$posts[0]->image) }}" alt="{{ $posts[0]->category->name }}" class="img-fluid">
+            </div>
+            @else
+                <img src="https://source.unsplash.com/950x450?{{ $posts[0]->category->name }}" class="card-img-top" alt="{{ $posts[0]->category->name }}">
+            @endif
             <div class="position-absolute px-3 py-1.5" style="background-color: rgba(255, 69, 69, 0.705)"><a href="/posts?category={{ $posts[0]->category->slug }}" class="text-white text-decoration-none">New {{ $posts[0]->category->name }} Post</a></div>
-            <img src="https://source.unsplash.com/950x450?{{ $posts[0]->category->name }}" class="card-img-top" alt="{{ $posts[0]->category->name }}">
             <div class="card-body text-center">
             <h3 class="card-title">{{ $posts[0]->title }}</h3>
                 <p>
@@ -51,7 +57,13 @@
             <div class="col-md-10 mb-3">
                 <div class="card">
                     <div class="position-absolute px-3 py-1.5" style="background-color: rgba(0, 0, 0, 0.8)"><a href="/posts?category={{ $post->category->slug }}" class="text-white text-decoration-none">{{ $post->category->name }}</a></div>
-                    <img src="https://source.unsplash.com/800x300?{{ $post->category->name }}" class="card-img-top" alt="{{ $post->category->name }}">
+                    @if($post->image) 
+                    <div style="max-height: 950px; overflow: hidden;">
+                        <img src="{{ asset('storage/'.$post->image) }}" alt="{{ $post->category->name }}" class="img-fluid">
+                    </div>
+                    @else
+                        <img src="https://source.unsplash.com/800x300?{{ $post->category->name }}" class="card-img-top" alt="{{ $post->category->name }}">
+                    @endif
                     <div class="card-body">
                     <h5 class="card-title">{{ $post->title }}</h5>
                     <p>
