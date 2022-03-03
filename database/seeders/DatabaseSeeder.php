@@ -17,21 +17,22 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        /*   User::create([
+        User::create([
             'name' => 'Frans Sebastian',
+            'username' => 'Frannonym_Code',
             'email' => 'stefanusfranssebastian@gmail.com',
             'password' => bcrypt('123456')
         ]);
 
-        User::create([
-            'name' => 'Abi Manyun',
-            'email' => 'abimanyub@gmail.com',
-            'password' => bcrypt('123456')
-        ]); */
+        // User::create([
+        //     'name' => 'Abi Manyun',
+        //     'email' => 'abimanyub@gmail.com',
+        //     'password' => bcrypt('123456')
+        // ]);
 
         User::factory(3)->create();
 
-
+        // post from 1 - 20
         Category::create([
             'name' => 'Web Programming',
             'slug' => 'web-programming'
@@ -52,7 +53,138 @@ class DatabaseSeeder extends Seeder
             'slug' => 'data-science'
         ]);
 
-        Post::factory(20)->create();
+        Category::create([
+            'name' => 'Artificial Intelligence',
+            'slug' => 'artificial-intelligence'
+        ]);
+
+        Category::create([
+            'name' => 'Blockchain',
+            'slug' => 'blockchain'
+        ]);
+
+        Category::create([
+            'name' => 'Mathematics',
+            'slug' => 'mathematics'
+        ]);
+
+        Category::create([
+            'name' => 'Mobile Developer',
+            'slug' => 'mobile-developer'
+        ]);
+
+        Category::create([
+            'name' => 'Cloud Computing',
+            'slug' => 'cloud-computing'
+        ]);
+        
+        Category::create([
+            'name' => 'Art',
+            'slug' => 'art'
+        ]);
+
+        Category::create([
+            'name' => 'Design',
+            'slug' => 'design'
+        ]);
+
+        Category::create([
+            'name' => 'Movie',
+            'slug' => 'movie'
+        ]);
+
+        Category::create([
+            'name' => 'Music',
+            'slug' => 'music'
+        ]);
+
+        Category::create([
+            'name' => 'Cartoon',
+            'slug' => 'cartoon'
+        ]);
+
+        Category::create([
+            'name' => 'Food',
+            'slug' => 'food'
+        ]);
+
+        Category::create([
+            'name' => 'Travel',
+            'slug' => 'travel'
+        ]);
+
+        Category::create([
+            'name' => 'Fashion',
+            'slug' => 'fashion'
+        ]);
+
+        Category::create([
+            'name' => 'Photography',
+            'slug' => 'photography'
+        ]);
+
+        Category::create([
+            'name' => 'Technology',
+            'slug' => 'technology'
+        ]);
+
+        Category::create([
+            'name' => 'Health',
+            'slug' => 'health'
+        ]);
+
+        // post from 21 to 30
+        Category::create([
+            'name' => 'Sport',
+            'slug' => 'sport'
+        ]);
+
+        Category::create([
+            'name' => 'Marketing',
+            'slug' => 'marketing'
+        ]);
+
+        Category::create([
+            'name' => 'Business',
+            'slug' => 'business'
+        ]);
+
+        Category::create([
+            'name' => 'Finance',
+            'slug' => 'finance'
+        ]);
+
+        Category::create([
+            'name' => 'Law',
+            'slug' => 'law'
+        ]);
+
+        Category::create([
+            'name' => 'Engineering',
+            'slug' => 'engineering'
+        ]);
+
+        Category::create([
+            'name' => 'Education',
+            'slug' => 'education'
+        ]);
+
+        Category::create([
+            'name' => 'Drama Korean',
+            'slug' => 'drama-korean'
+        ]);
+
+        Category::create([
+            'name' => 'Hollywood',
+            'slug' => 'hollywood'
+        ]);
+        
+        Category::create([
+            'name' => 'Anime',
+            'slug' => 'anime'
+        ]);
+
+        Post::factory(60)->create();
 
 
 
