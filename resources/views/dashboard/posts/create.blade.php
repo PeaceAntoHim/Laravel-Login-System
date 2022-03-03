@@ -6,7 +6,7 @@
         </div>
 
             <div class="col-lg-8">
-                <form method="post" action="/dashboard/posts" class="mb-5">
+                <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                       {{-- Form Title --}}
@@ -40,7 +40,12 @@
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                           @endif
                         @endforeach
-                      </select>
+                      </select> 
+                    </div>
+                    {{-- From Upload Image --}}
+                    <div class="mb-3">
+                      <label for="image" class="form-label">Post Image</label>
+                      <input class="form-control" type="file" id="image" name="image">
                     </div>
                     {{-- From body with trix --}}
                     <div class="mb-3">
