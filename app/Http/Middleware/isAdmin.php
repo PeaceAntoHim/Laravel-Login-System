@@ -16,7 +16,7 @@ class isAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->guest() || auth()->user()->username !== 'Frannonym_Code' ) {
+        if(auth()->guest() || !auth()->user()->is_admin ) {
             abort(403);
         }
         
